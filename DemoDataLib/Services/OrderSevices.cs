@@ -17,7 +17,7 @@ namespace DemoDataLib.Services
             return new ExcuteFunc<OrderSevices, Model.Order>((x) =>
             {
                 return orderRepos.GetFullDatas(orderId, DbAccess.LockTypes.NOLOCK);
-            });
+            }, Connection);
         }
     }
 }
